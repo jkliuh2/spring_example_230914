@@ -12,7 +12,7 @@ public class ReviewBO {
 	@Autowired
 	private ReviewMapper reviewMapper;
 	
-	// input : X  / output : Review(id에 해당하는 딱 하나)
+	// input : X  / output : Review(id=5에 해당하는 딱 하나)
 	public Review getReview() {
 		return reviewMapper.selectReview();
 	}

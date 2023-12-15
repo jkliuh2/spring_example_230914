@@ -9,4 +9,5 @@ import com.example.lesson03.domain.Review;
 public interface ReviewMapper {
 
 	public Review selectReview();
+	// id=5 딱 한건이라 ListX
 }
