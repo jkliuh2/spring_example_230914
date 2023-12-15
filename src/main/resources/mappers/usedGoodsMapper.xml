@@ -4,7 +4,11 @@
  
  <mapper namespace="com.example.lesson02.mapper.UsedGoodsMapper"><!-- 누구와 연결할 것 인가? mapper 주소 -->
  
- 	<select id="selectUsedGoodsList"><!-- mapper에 있는 메소드 명 -->
- 	
+ 	<select id="selectUsedGoodsList" resultType="com.example.lesson02.domain.UsedGoods">
+ 	<!-- mapper에 있는 메소드 명 + 한 건(행)을 어디 담을것인가?(UsedGoods의 주소) -->
+ 		SELECT
+			*
+		FROM
+			`used_goods` 		
  	</select>
  </mapper>
