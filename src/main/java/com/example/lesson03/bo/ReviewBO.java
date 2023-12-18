@@ -12,8 +12,8 @@ public class ReviewBO {
 	@Autowired
 	private ReviewMapper reviewMapper;
 	
-	// input : X  / output : Review(id=5에 해당하는 딱 하나)
-	public Review getReview() {
-		return reviewMapper.selectReview();
+	// input : id  / output : Review(id=5에 해당하는 딱 하나)
+	public Review getReview(int id) { // Controller에서 들어온 input
+		return reviewMapper.selectReview(id); // Mapper에 id가 들어감
 	}
 }

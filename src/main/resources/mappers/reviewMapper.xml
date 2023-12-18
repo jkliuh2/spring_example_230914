@@ -4,7 +4,9 @@
  
  <mapper namespace="com.example.lesson03.mapper.ReviewMapper"><!-- 어느 인터페이스와 연결 -->
  
- 	<select id="selectReview" resultType="com.example.lesson03.domain.Review"><!-- id=인터페이스 메소드, resultType=하나에 대한 타입의 경로 -->
+ 	<select id="selectReview" parameterType="int" resultType="com.example.lesson03.domain.Review">
+ 	<!-- id=인터페이스 메소드, resultType=하나에 대한 타입의 경로
+ 	parameter=requestParam의 타입 -->
  		SELECT
  			`id`
 			, `storeId`
@@ -17,8 +19,8 @@
 		FROM
 			`new_review`
 		WHERE
-			`id` = 5
-			<!-- id=5 딱 한건 -->
+			`id` = #{id}
+			<!-- #{} 내에는 requestParam의 값이 들어간다. -->
  	</select>
  	
  </mapper>

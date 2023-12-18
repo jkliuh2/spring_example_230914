@@ -8,6 +8,6 @@ import com.example.lesson03.domain.Review;
 @Repository
 public interface ReviewMapper {
 
-	public Review selectReview();
-	// id=5 딱 한건이라 ListX
+	// input:id / output:Review
+	public Review selectReview(int id); // BO로부터 id input
 }
