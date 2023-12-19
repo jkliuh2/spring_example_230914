@@ -21,4 +21,5 @@ public class Lesson03Ex03RestController {
 		int rowCount = reviewBO.updateReviewById(id, review);
 		return "변경 완료: " + rowCount;
 	}
+	// DB 업데이트 완료
 }
