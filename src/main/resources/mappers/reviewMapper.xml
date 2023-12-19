@@ -23,4 +23,59 @@
 			<!-- #{} 내에는 requestParam의 값이 들어간다. -->
  	</select>
  	
+ 	<insert id="insertReview" parameterType="com.example.lesson03.domain.Review">
+ 	<!-- paramType: Review객체의 주소값. resultType: X -->
+ 		INSERT INTO `new_review`
+ 		(
+	 		`storeId`
+			, `menu`
+			, `userName`
+			, `point`
+			, `review`
+			, `createdAt`
+			, `updatedAt`
+ 		)
+ 		VALUES
+ 		(
+ 			#{storeId}
+ 			, #{menu}
+ 			, #{userName}
+ 			, #{point}
+ 			, #{review}
+ 			, NOW()
+ 			, NOW()
+ 		)
+ 	</insert>
+ 	
+ 	<insert id="insertReviewAsField" parameterType="map">
+ 		INSERT INTO `new_review`
+ 		(
+	 		`storeId`
+			, `menu`
+			, `userName`
+			, `point`
+			, `review`
+			, `createdAt`
+			, `updatedAt`
+ 		)
+ 		VALUES
+ 		(
+ 			#{storeId}
+ 			, #{menu}
+ 			, #{userName}
+ 			, #{point}
+ 			, #{review}
+ 			, NOW()
+ 			, NOW()
+ 		) 	
+ 	</insert>
+ 	
+ 	<update id="updateReviewById" parameterType="map">
+ 		UPDATE `new_review`
+ 		SET
+ 			`review` = #{review}
+ 			, `updatedAt` = NOW() <!-- update에서는 꼭 업데이트 시간 고쳐야 한다. -->
+ 		WHERE
+ 			`id` = #{id}
+ 	</update>
  </mapper>
