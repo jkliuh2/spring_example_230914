@@ -78,4 +78,12 @@
  		WHERE
  			`id` = #{id}
  	</update>
+ 	
+ 	<delete id="deleteReviewById" parameterType="int">
+ 		DELETE
+ 		FROM
+ 			`new_review`
+ 		WHERE
+ 			`id` = #{id} <!-- 한개밖에 param이 없을 때는 대충 ddddd 로 넣어도 잘 읽기는 함 -->
+ 	</delete>
  </mapper>

@@ -38,4 +38,12 @@ public class ReviewBO {
 	public int updateReviewById(int id, String review) {
 		return reviewMapper.updateReviewById(id, review);
 	}
+	
+	
+	// <DELETE>
+	// input: id / output: int or X(이번엔 이걸로) (BO에서 안줘도 되고, Controller에서 안줘도 됨.) 
+	public void deleteReviewById(int id) {
+		reviewMapper.deleteReviewById(id);
+		// Mapper에서 int를 리턴하긴 하지만, Controller에 보내지 않는다.
+	}
 }

@@ -33,4 +33,9 @@ public interface ReviewMapper {
 	public int updateReviewById(
 			@Param("id") int id,
 			@Param("review") String review);
+	
+	// <DELETE>
+	// input: id / output: int(여기선 이걸로) or X(여기서도 output 선택 가능.) 
+	public int deleteReviewById(int id);
+	// Param이 한개라서 어노테이션 불필요.
 }
