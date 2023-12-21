@@ -13,6 +13,32 @@
 <body>
 	<div class="container">
 		<h1>가입된 회원 정보</h1>
+		<table class="table text-center table-striped">
+			<tr>
+				<th>id</th>
+				<td>${student.id}</td>
+			</tr>
+			<tr>
+				<th>이름</th>
+				<td>${student.name}</td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td>${student.phoneNumber}</td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td>${student.email}</td>
+			</tr>
+			<tr>
+				<th>장래희망</th>
+				<td>${student.dreamJob}</td>
+			</tr>
+			<tr>
+				<th>가입 일자</th>
+				<td>${student.updatedAt}</td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>

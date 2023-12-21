@@ -12,7 +12,13 @@ public class StudentBO {
 	@Autowired
 	private StudentMapper studentMapper;
 	
+	// insert
 	public void addStudent(Student student) {
 		studentMapper.insertStudent(student);
+	}
+	
+	// select
+	public Student getStudent(Student student) {
+		return studentMapper.selectStudent(student);
 	}
 }
