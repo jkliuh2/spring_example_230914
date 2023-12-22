@@ -8,7 +8,7 @@
 <title>JSTL Core 라이브러리(2)</title>
 </head>
 <body>
-	<h1>1. 조건문(c:choose, C:when, c:otherwise)</h1>
+	<h1>1. 조건문(c:choose, c:when, c:otherwise)</h1>
 	<c:set var="weight" value="65" />
 	
 	<c:choose>

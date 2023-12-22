@@ -27,7 +27,7 @@
 	<%-- <c:out value="<script>alert('얼럿창 띄우기')</script>" escapeXml="false" /><br> <!-- false 하면 alert뜸 -->  --%>
 	
 	
-	<h1>3. 조건문(c:if)</h1>
+	<h1>3. 조건문(c:if)</h1> <%-- else X. 오직 if --%>
 	<c:if test="${number1 > 50}">
 		number1은 50보다 크다.<br> <%-- test 조건이 참이면 태그 사이 value 출력. --%>
 	</c:if>
