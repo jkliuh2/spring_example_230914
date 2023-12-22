@@ -11,5 +11,5 @@ public interface StudentMapper {
 	public void insertStudent(Student student);
 	
 	// select
-	public Student selectStudent(Student student);
+	public Student selectStudentById(int id);
 }

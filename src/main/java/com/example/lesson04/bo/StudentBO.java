@@ -18,7 +18,7 @@ public class StudentBO {
 	}
 	
 	// select
-	public Student getStudent(Student student) {
-		return studentMapper.selectStudent(student);
+	public Student getStudentById(int id) {
+		return studentMapper.selectStudentById(id);
 	}
 }

@@ -39,7 +39,10 @@ public class Lesson04Ex02Controller {
 		
 		
 		// DB에서 방금 가입된 사용자 select
-		student = studentBO.getStudent(student);
+		// student에 있는 pk값(id)로 select 실행
+		int id = student.getId();
+		student = studentBO.getStudentById(id);
+		// 덮어써도 상관은 없지만, 찝찝하면 새로 객체를 만들어도 무관
 		
 		// Model 객체에 담는다
 		model.addAttribute("student", student);
