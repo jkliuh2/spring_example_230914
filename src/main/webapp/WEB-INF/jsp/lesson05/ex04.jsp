@@ -54,8 +54,8 @@
 	${fn:toUpperCase(str1)}
 	
 	<h1>10. 앞뒤 공백 제거</h1>
-	<c:set var="str3" value="     h   ell o     " /> <%-- 태그 사이에 넣는 것은 의미 없음(어차피 알아서 삭제) --%>
-	<pre>${str3}</pre> <%-- pre태그 없으면 출력되면서 알아서 삭제(앞뒤만) --%>
+	<c:set var="str3" value="     h   ell o     " />
+	<pre>${str3}</pre> <%-- pre: value를 그대로 출력. --%>
 	${fn:trim(str3)}
 </body>
 </html>
