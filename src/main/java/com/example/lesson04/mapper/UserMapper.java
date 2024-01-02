@@ -17,4 +17,7 @@ public interface UserMapper {
 	
 	// 최근 가입자 Select
 	public User selectLatestUser();
+	
+	// 중복확인 눌렀을 때, 중복 확인하는 메소드
+	public boolean isDuplicationByName(String name);
 }

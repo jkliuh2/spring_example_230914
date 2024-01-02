@@ -25,4 +25,10 @@ public class UserBO {
 	public User getLatestUser() {
 		return userMapper.selectLatestUser();
 	}
+	
+	// 중복확인 눌렀을 때, 중복 확인하는 메소드
+	// input:name / output:boolean (true:중복, false:중복X)
+	public boolean isDuplicationByName(String name) {
+		return userMapper.isDuplicationByName(name);
+	}
 }

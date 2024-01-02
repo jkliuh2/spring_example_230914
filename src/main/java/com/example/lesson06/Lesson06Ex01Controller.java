@@ -18,7 +18,7 @@ public class Lesson06Ex01Controller {
 	private UserBO userBO;
 	
 
-	// 회원가입 화면
+	// 회원가입 입력 화면
 	// url: http://localhost/lesson06/ex01/add-user-view
 	@GetMapping("/add-user-view")
 	public String addUserView() {

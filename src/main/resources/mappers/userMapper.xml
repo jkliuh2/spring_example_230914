@@ -39,4 +39,18 @@
 		ORDER BY `id` DESC 
 		LIMIT 1
  	</select>
+ 	
+ 	<!-- 중복 확인. 
+ 	boolean -> count()로 가져와서 리턴하면 됨
+ 	boolean을 resultType으로 잡으면,
+ 	0:false, 
+ 	1:true -> 정확히는 0이 아닌 수 -->
+ 	<select id="isDuplicationByName" parameterType="string" resultType="boolean">
+ 		SELECT
+ 			count(*)
+ 		FROM
+ 			`new_user`
+		WHERE 			
+			`name` = #{name}
+ 	</select>
  </mapper>
