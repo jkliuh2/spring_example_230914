@@ -17,6 +17,7 @@ public class Lesson07Ex01RestController {
 	private StudentBO studentBO;
 
 	// c: create
+	// url: http://localhost/lesson07/ex01/1
 	@GetMapping("/ex01/1")
 	public StudentEntity create() {
 		String name = "김바다";
