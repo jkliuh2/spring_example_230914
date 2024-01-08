@@ -1,12 +1,12 @@
 package com.example.lesson03.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
 import com.example.lesson03.domain.Review;
 
 
-@Repository
+@Mapper
 public interface ReviewMapper {
 
 	// <SELECT>

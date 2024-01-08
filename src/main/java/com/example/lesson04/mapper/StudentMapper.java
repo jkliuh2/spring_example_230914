@@ -1,10 +1,10 @@
 package com.example.lesson04.mapper;
 
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 import com.example.lesson04.domain.Student;
 
-@Repository
+@Mapper
 public interface StudentMapper {
 
 	// insert
