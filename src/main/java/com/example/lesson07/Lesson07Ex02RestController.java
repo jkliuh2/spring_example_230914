@@ -51,7 +51,7 @@ public class Lesson07Ex02RestController {
 		//return studentRepository.findByNameStartingWith("김");
 		// 메소드 이름 주의
 		
-		// 9. id가 1 ~ 5 인 데이터 조회(between) (1이상 5이하)
+		// 9. id가 1 ~ 5 인 데이터 조회(between)(1이상 5이하)
 		return studentRepository.findByIdBetween(1, 5);
 	}
 }
