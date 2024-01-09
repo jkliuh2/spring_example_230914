@@ -3,6 +3,8 @@ package com.example.lesson07.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import com.example.lesson07.entity.StudentEntity;
 
@@ -43,7 +45,16 @@ public interface StudentRepository extends JpaRepository<StudentEntity, Integer>
 	public List<StudentEntity> findByIdBetween(int startId, int endId); // 변수명은 딱히 상관없음 
 	
 	
+	// ex02/2 - JPQL(Entity에 조회)
+//	@Query(value = "select st from StudentEntity st where st.dreamJob =:dreamJob") // JPQL 조회
+	@Query(value = "select * from new_student where dreamJob =:dreamJob", nativeQuery = true) // nativeQuery. 진짜 쿼리문 넣으면 됨.
+	public List<StudentEntity> findByDreamJob(@Param("dreamJob") String dreamJob);
 	
+	
+	
+	
+	
+	////////////////////////
 	
 	// 어디서 오류가 나서 수정한다고 인터페이스를 클래스로 만듬
 //	@PersistenceContext

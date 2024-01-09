@@ -54,4 +54,13 @@ public class Lesson07Ex02RestController {
 		// 9. id가 1 ~ 5 인 데이터 조회(between)(1이상 5이하)
 		return studentRepository.findByIdBetween(1, 5);
 	}
+	
+	
+	// Native -> Repository로 가보면 된다.
+	// http://localhost/lesson07/ex02/2
+	@GetMapping("/2")
+	public List<StudentEntity> getStudent() {
+		// 장래희망이 '개발자'인 데이터 조회
+		return studentRepository.findByDreamJob("개발자");
+	}
 }
